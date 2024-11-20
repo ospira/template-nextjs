@@ -74,6 +74,10 @@ function App()
     }
 
     // Event emitted from the PhaserGame component
+    /// ^ this could be far more clear
+    /// this is really just a callback to fire on Phaser events
+    /// in this case "current-scene-ready"
+    /// passing it as "currentScene" is unclear imo
     const currentScene = (scene: Phaser.Scene) => {
 
         setCanMoveSprite(scene.scene.key !== 'MainMenu');
